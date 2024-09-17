@@ -12,7 +12,9 @@
       "generator_floatinglength": "Floating pseudoword length",
       "generator_floatinglength_desc": "When selected, each pseudoword that makes up the password will consist of 3 to 8 characters.",
       "generator_pseudowordlength_title": "Each pseudoword length",
-      "generator_pseudowordlength_helptext": "Each pseudoword must consist of at least 3 letters."
+      "generator_pseudowordlength_helptext": "Each pseudoword must consist of at least 3 letters.",
+      "generator_passwordlength_title": "How many pseudowords make up the password?",
+      "generator_passwordlength_helptext": "At least 3 pseudowords are required to form a password."
     }
   },
   "ja": {
@@ -28,7 +30,9 @@
       "generator_floatinglength": "浮動疑似語の長さ",
       "generator_floatinglength_desc": "選択すると、パスワードを構成する各疑似語は、3〜8文字で構成されます。",
       "generator_pseudowordlength_title": "各疑似語の長さ",
-      "generator_pseudowordlength_helptext": "各疑似語は、少なくとも3つの文字で構成されている必要があります。"
+      "generator_pseudowordlength_helptext": "各疑似語は、少なくとも3つの文字で構成されている必要があります。",
+      "generator_passwordlength_title": "パスワードを構成する疑似語の数は？",
+      "generator_passwordlength_helptext": "パスワードを形成するには、少なくとも3つの疑似語が必要です。"
     }
   },
   "zh-CN": {
@@ -44,7 +48,9 @@
       "generator_floatinglength": "每个虚词长度不定",
       "generator_floatinglength_desc": "选中后，每个组成密码的虚词将由 3 到 8 个字符组成。",
       "generator_pseudowordlength_title": "每个虚词长度",
-      "generator_pseudowordlength_helptext": "每个虚词必须至少包含 3 个字母。"
+      "generator_pseudowordlength_helptext": "每个虚词必须至少包含 3 个字母。",
+      "generator_passwordlength_title": "密码由多少个虚词组成？",
+      "generator_passwordlength_helptext": "需至少使用 3 个虚词来生成密码。"
     }
   }
 }

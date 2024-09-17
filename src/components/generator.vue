@@ -44,24 +44,25 @@ function copy() {
 
 <template>
   <div>
-    <div class="bg-amber-100 w-full my-4 p-8 flex items-center justify-center rounded-lg font-mono text-xl text-black cursor-pointer" @click="copy">{{generatedpassword}}</div>
+    <div class="bg-amber-400 my-4 p-4 rounded-md text-amber-900" v-if="generatedpassword.length > 63">
+      <div class="text-xl mb-2 font-bold">⚠️ {{$t("message.generoator_passwordtoolongalert_title")}}</div>
+      <div>{{$t("message.generoator_passwordtoolongalert_msg")}}</div>
+    </div>
+    <div class="bg-amber-100 w-full mb-4 p-8 flex items-center justify-center rounded-lg font-mono text-xl text-black cursor-pointer text-center break-all" @click="copy">{{generatedpassword}}</div>
     <div class="flex justify-between items-center">
       <div class="text-slate-500 dark:text-slate-400">{{$t("message.generator_clicktocopy")}}</div>
       <button class="bg-cyan-500 text-white py-2 px-4 rounded-md" @click="generate">{{$t("message.generator_regenerate_btn")}}</button>
     </div>
   </div>
 
-  <hr class="my-4" />
+  <hr class="my-8" />
 
   <div>
     <div class="text-3xl uppercase font-bold">{{$t("message.generator_pref")}}</div>
 
-    <div class="bg-amber-400 my-4 p-4 rounded-md text-amber-900" v-if="generatedpassword.length > 63">
-      <div class="text-xl mb-2 font-bold">⚠️ {{$t("message.generoator_passwordtoolongalert_title")}}</div>
-      <div>{{$t("message.generoator_passwordtoolongalert_msg")}}</div>
-    </div>
+    
 
-    <div class="flex flex-col gap-4 mt-4">
+    <div class="flex flex-col gap-6 mt-6">
       <div class="flex gap-2 items-start">
         <input type="checkbox" id="randomwordlength" v-model="randomwordlength" @change="generate">
         <div class="mt-[-4px]">
@@ -74,6 +75,12 @@ function copy() {
         <div class="font-bold">{{ $t('message.generator_pseudowordlength_title') }}</div>
         <input type="number" v-model="wordlength" @change="generate" min="3" class="w-full shadow-inner border-2 border-slate-200 dark:bg-slate-600 dark:border-slate-500 p-2 rounded-md my-2 outline-none" />
         <div class="text-slate-500 dark:text-slate-400">{{$t("message.generator_pseudowordlength_helptext")}}</div>
+      </div>
+
+      <div>
+        <div class="font-bold">{{ $t('message.generator_passwordlength_title') }}</div>
+        <input type="number" v-model="wordcount" @change="generate" min="3" class="w-full shadow-inner border-2 border-slate-200 dark:bg-slate-600 dark:border-slate-500 p-2 rounded-md my-2 outline-none" />
+        <div class="text-slate-500 dark:text-slate-400">{{$t("message.generator_passwordlength_helptext")}}</div>
       </div>
     </div>
   </div>
