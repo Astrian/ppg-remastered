@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply dark:bg-slate-950 dark:text-white;
+  @apply dark:bg-slate-700 dark:text-white;
   font-family: 'AvenirNextRegular';
 }
