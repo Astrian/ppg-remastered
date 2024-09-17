@@ -2,6 +2,8 @@
 import pseudoword from 'pseudoword'
 
 import { onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n() 
 
 const generatedpassword = ref('password')
 const wordcount = ref(4)
@@ -33,11 +35,16 @@ function generate() {
   }
   generatedpassword.value = result
 }
+
+function copy() {
+  navigator.clipboard.writeText(generatedpassword.value)
+  alert(t("message.generator_copied"))
+}
 </script>
 
 <template>
   <div>
-    <div class="bg-amber-100 w-full my-4 p-8 flex items-center justify-center rounded-lg font-mono text-xl text-black">{{generatedpassword}}</div>
+    <div class="bg-amber-100 w-full my-4 p-8 flex items-center justify-center rounded-lg font-mono text-xl text-black cursor-pointer" @click="copy">{{generatedpassword}}</div>
     <div class="flex justify-between items-center">
       <div class="text-slate-500 dark:text-slate-400">{{$t("message.generator_clicktocopy")}}</div>
       <button class="bg-cyan-500 text-white py-2 px-4 rounded-md" @click="generate">{{$t("message.generator_regenerate_btn")}}</button>

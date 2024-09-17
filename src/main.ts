@@ -7,6 +7,7 @@ import i18n_strings from './utilities/i18n.json'
 console.log(i18n_strings)
 
 const i18n = createI18n({
+  legacy: false,
   locale: navigator.language || 'en',
   fallbackLocale: 'en',
   messages: i18n_strings
