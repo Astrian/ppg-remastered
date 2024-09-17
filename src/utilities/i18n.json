@@ -5,7 +5,14 @@
       "appname_second": "Remastered Version",
       "generator_clicktocopy": "Tap the password to copy",
       "generator_regenerate_btn": "Regenerate",
-      "generator_copied": "The generated password has been copied to the clipboard."
+      "generator_copied": "The generated password has been copied to the clipboard.",
+      "generator_pref": "Preferences",
+      "generoator_passwordtoolongalert_title": "Password may too long",
+      "generoator_passwordtoolongalert_msg": "This password length may exceed the maximum password length for most scenarios, including the WPA2 encryption protocol.",
+      "generator_floatinglength": "Floating pseudoword length",
+      "generator_floatinglength_desc": "When selected, each pseudoword that makes up the password will consist of 3 to 8 characters.",
+      "generator_pseudowordlength_title": "Each pseudoword length",
+      "generator_pseudowordlength_helptext": "Each pseudoword must consist of at least 3 letters."
     }
   },
   "ja": {
@@ -14,7 +21,14 @@
       "appname_second": "リマスター版",
       "generator_clicktocopy": "パスワードをタップしてコピー",
       "generator_regenerate_btn": "再生成",
-      "generator_copied": "生成されたパスワードがクリップボードにコピーされました。"
+      "generator_copied": "生成されたパスワードがクリップボードにコピーされました。",
+      "generator_pref": "設定",
+      "generoator_passwordtoolongalert_title": "パスワードが長すぎる可能性があります",
+      "generoator_passwordtoolongalert_msg": "このパスワードの長さは、WPA2暗号化プロトコルを含むほとんどのシナリオの最大パスワード長を超える可能性があります。",
+      "generator_floatinglength": "浮動疑似語の長さ",
+      "generator_floatinglength_desc": "選択すると、パスワードを構成する各疑似語は、3〜8文字で構成されます。",
+      "generator_pseudowordlength_title": "各疑似語の長さ",
+      "generator_pseudowordlength_helptext": "各疑似語は、少なくとも3つの文字で構成されている必要があります。"
     }
   },
   "zh-CN": {
@@ -23,7 +37,14 @@
       "appname_second": "重置版",
       "generator_clicktocopy": "点击密码以复制",
       "generator_regenerate_btn": "重新生成",
-      "generator_copied": "生成的密码已复制到剪贴板。"
+      "generator_copied": "生成的密码已复制到剪贴板。",
+      "generator_pref": "偏好",
+      "generoator_passwordtoolongalert_title": "密码可能太长",
+      "generoator_passwordtoolongalert_msg": "此密码的长度可能超过包括 WPA2 加密在内的大多数情况下的允许密码长度。",
+      "generator_floatinglength": "每个虚词长度不定",
+      "generator_floatinglength_desc": "选中后，每个组成密码的虚词将由 3 到 8 个字符组成。",
+      "generator_pseudowordlength_title": "每个虚词长度",
+      "generator_pseudowordlength_helptext": "每个虚词必须至少包含 3 个字母。"
     }
   }
 }

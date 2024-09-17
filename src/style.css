@@ -6,3 +6,7 @@ body {
   @apply dark:bg-slate-700 dark:text-white;
   font-family: 'AvenirNextRegular';
 }
+
+hr {
+  @apply dark:border-slate-500;
+}
