@@ -37,9 +37,9 @@ function generate() {
 
 <template>
   <div>
-    <div class="bg-amber-100 w-full my-4 p-8 flex items-center justify-center rounded-lg font-mono text-xl">{{generatedpassword}}</div>
+    <div class="bg-amber-100 w-full my-4 p-8 flex items-center justify-center rounded-lg font-mono text-xl text-black">{{generatedpassword}}</div>
     <div class="flex justify-between items-center">
-      <div class="text-slate-500">{{$t("message.generator_clicktocopy")}}</div>
+      <div class="text-slate-500 dark:text-slate-400">{{$t("message.generator_clicktocopy")}}</div>
       <button class="bg-cyan-500 text-white py-2 px-4 rounded-md" @click="generate">{{$t("message.generator_regenerate_btn")}}</button>
     </div>
   </div>
