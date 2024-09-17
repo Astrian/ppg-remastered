@@ -1,5 +1,6 @@
-# Vue 3 + TypeScript + Vite
+# Pseudo Password Generator (Remastered)
+This is a tool for randomly generating passwords consisting of pseudowords. Remastered version for the [existing repository](https://github.com/Astrian/pseudopassword-generator).
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A ‘pseudoword’ is a word that is not a meaningful English word in itself, but is spelled according to the rules of pronunciation. These words have a certain randomness, but are easier to remember (in the short term).
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+When using WPA2-Personal (WPA2-PSK) encryption mode during home WLAN hotspot deployment, the security is related to the randomness of the password. However, it is difficult to manually enter a string that is too random, so a password with pseudowords that combines randomness and ‘pronounceability’ is more suitable for use as a Wi-Fi password.
