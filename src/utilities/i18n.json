@@ -1,0 +1,26 @@
+{
+  "en": {
+    "message": {
+      "appname": "Pseudo Password Generator",
+      "appname_second": "Remastered Version",
+      "generator_clicktocopy": "Tap the password to copy",
+      "generator_regenerate_btn": "Regenerate"
+    }
+  },
+  "ja": {
+    "message": {
+      "appname": "疑似語パスワード生成器",
+      "appname_second": "リマスター版",
+      "generator_clicktocopy": "パスワードをタップしてコピー",
+      "generator_regenerate_btn": "再生成"
+    }
+  },
+  "zh-CN": {
+    "message": {
+      "appname": "虚词密码生成器",
+      "appname_second": "重置版",
+      "generator_clicktocopy": "点击密码以复制",
+      "generator_regenerate_btn": "重新生成"
+    }
+  }
+}

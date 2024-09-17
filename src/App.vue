@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
+
+import Generator from './components/generator.vue';
 
 onMounted(() => {
   const link = document.createElement('link')
@@ -9,14 +11,22 @@ onMounted(() => {
 
     document.head.appendChild(link)
 })
+
+onUnmounted(() => {
+  const link = document.querySelector('link')
+  if (link) {
+    document.head.removeChild(link)
+  }
+})
 </script>
 
 <template>
   <section class="w-full mx-4 lg:w-2/3 lg:mx-auto">
-    <div class="my-6">
-      <div class="text-4xl font-bold">Pseudo Password Generator</div>
-      <div class="text-2xl">Remastered Version</div>
+    <div class="my-6 flex flex-col gap-2">
+      <div class="text-4xl font-bold">{{ $t('message.appname') }}</div>
+      <div class="text-2xl">{{ $t('message.appname_second') }}</div>
     </div>
     <hr />
+    <Generator />
   </section>
 </template>
