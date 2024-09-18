@@ -23,7 +23,9 @@
       "generator_divider_options_custom": "Custom (not recommended)",
       "generator_customdivider_title": "Custom divider character",
       "generator_customdivider_helptext": "Leave blank to cancel divide character.",
-      "generator_captialize_title": "Capitalize the first letter of each pseudoword"
+      "generator_captialize_title": "Capitalize the first letter of each pseudoword",
+      "notes_title": "Notes",
+      "notes_body": "<p>This is a tool for randomly generating passwords consisting of pseudowords. It also a remastered version of the <a href='https://github.com/Astrian/pseudopassword-generator' target='_blank'>original Pseudo Password Generator</a>.</p><p>A ‘pseudoword’ is a word that is not a meaningful English word in itself, but is spelled according to the rules of pronunciation. These words have a certain randomness, but are easier to remember (in the short term).</p><p>When using <a href='https://en.wikipedia.org/wiki/WPA' target='_blank'>WPA2-Personal (WPA2-PSK)</a> encryption mode during home WLAN hotspot deployment, the security is related to the randomness of the password. However, it is difficult to manually enter a string that is too random, so a password with pseudowords that combines randomness and ‘pronounceability’ is more suitable for use as a Wi-Fi password. <a href='https://mp.weixin.qq.com/s/wPx-wELB6-ghzLq1S_2MdQ' target='_blank'>Learn more (Simplified Chinese)…</a></p><p>This tool uses the package <a href='https://www.npmjs.com/package/pseudoword' target='_blank'>pseudoword</a> to generate passwords, the whole process is done by your device. The generated passwords are not sent to any server and are not saved. You can audit the code in the <a href='https://github.com/Astrian/pseudopassword-generator' target='_blank'>project repository</a>.</p>"
     }
   },
   "ja": {
@@ -50,7 +52,9 @@
       "generator_divider_options_custom": "カスタム（非推奨）",
       "generator_customdivider_title": "カスタム区切り文字",
       "generator_customdivider_helptext": "区切り文字をキャンセルするには空白のままにしてください。",
-      "generator_captialize_title": "各疑似語の最初の文字を大文字にする"
+      "generator_captialize_title": "各疑似語の最初の文字を大文字にする",
+      "notes_title": "ノート",
+      "notes_body": "<p>これは疑似語で構成されたパスワードをランダムに生成するためのツールです。また、<a href='https://github.com/Astrian/pseudopassword-generator' target='_blank'>元の疑似語パスワード生成器</a>のリマスター版でもあります。</p><p>「疑似語」とは、それ自体が意味のある英単語ではないが、発音のルールに従って綴られた単語のことです。これらの単語はある程度ランダム性を持ちますが、（短期的に）覚えやすいです。</p><p>家庭用 WLAN ホットスポットの展開中に<a href='https://ja.wikipedia.org/wiki/WPA' target='_blank'>WPA2-Personal（WPA2-PSK）</a>暗号化モードを使用する場合、セキュリティはパスワードのランダム性に関連しています。ただし、あまりにランダムな文字列を手動で入力するのは難しいため、ランダム性と「発音可能性」を兼ね備えた疑似語パスワードがWi-Fiパスワードとして使用するには適しています。<a href='https://mp.weixin.qq.com/s/wPx-wELB6-ghzLq1S_2MdQ' target='_blank'>詳細（簡体字中国語）…</a></p><p>このツールは、パッケージ<a href='https://www.npmjs.com/package/pseudoword' target='_blank'>pseudoword</a>を使用してパスワードを生成します。生成されたパスワードはサーバーに送信されず、保存されません。コードを<a href='https://github.com/Astrian/pseudopassword-generator' target='_blank'>プロジェクトリポジトリ</a>で確認できます。</p>"
     }
   },
   "zh-CN": {
@@ -77,7 +81,9 @@
       "generator_divider_options_custom": "自定义（不推荐）",
       "generator_customdivider_title": "自定义虚词分隔",
       "generator_customdivider_helptext": "留空以取消分隔字符。",
-      "generator_captialize_title": "每个虚词首字母大写"
+      "generator_captialize_title": "每个虚词首字母大写",
+      "notes_title": "说明",
+      "notes_body": "<p>这是一个用于随机生成由虚词组成的密码的工具，同时是<a href='https://github.com/Astrian/pseudopassword-generator' target='_blank'>旧版虚词密码生成器</a>的重制版。</p><p>「虚词」（pesudoword）是指本身不是有意义英语单词、但拼写上符合发音规则的单词。这种单词拥有一定随机性，但更容易被人（短期地）记住。</p><p>在家用 WLAN 热点部署过程中，如果使用 <a href='https://zh.wikipedia.org/wiki/WPA' target='_blank'>WPA2-Personal（WPA2-PSK）</a>加密模式，其安全性与密码随机性相关。但过于随机的字符串难以手动输入，因此兼具随机性和「可念性」的虚词密码较为适合作为 Wi-Fi 密码使用。<a href='https://mp.weixin.qq.com/s/wPx-wELB6-ghzLq1S_2MdQ' target='_blank'>详细…</a></p><p>本工具使用包 <a href='https://www.npmjs.com/package/pseudoword' target='_blank'>pseudoword</a> 来生成密码，全过程皆由您的设备完成。生成的密码不会发送至任何服务器，也不会被保存。您可以前往<a href='https://github.com/Astrian/pseudopassword-generator' target='_blank'>本项目仓库</a>进行代码审计。</p>"
     }
   }
 }
