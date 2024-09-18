@@ -11,6 +11,7 @@ const worddivider = ref(1)
 const customdivider = ref("")
 const randomwordlength = ref(true)
 const wordlength = ref(5)
+const captialize = ref(false)
 
 onMounted(() => {
   generate()
@@ -27,10 +28,17 @@ function generate() {
         result += divider[worddivider.value - 1]
       }
     }
+
+    let generatedPseudoword = ""
     if (randomwordlength.value) {
-      result += pseudoword(Math.floor(Math.random() * 6) + 3)
+      generatedPseudoword = pseudoword(Math.floor(Math.random() * 6) + 3)
     } else {
-      result += pseudoword(wordlength.value)
+      generatedPseudoword = pseudoword(wordlength.value)
+    }
+    if (captialize.value) {
+      result += generatedPseudoword.charAt(0).toUpperCase() + generatedPseudoword.slice(1)
+    } else {
+      result += generatedPseudoword
     }
   }
   generatedpassword.value = result
@@ -60,9 +68,14 @@ function copy() {
   <div>
     <div class="text-3xl uppercase font-bold">{{$t("message.generator_pref")}}</div>
 
-    
-
     <div class="flex flex-col gap-6 mt-6">
+      <div class="flex gap-2 items-start">
+        <input type="checkbox" id="captialize" v-model="captialize" @change="generate">
+        <div class="mt-[-4px]">
+          <label for="captialize" class="font-bold">{{ $t('message.generator_captialize_title') }}</label>
+        </div>
+      </div>
+
       <div class="flex gap-2 items-start">
         <input type="checkbox" id="randomwordlength" v-model="randomwordlength" @change="generate">
         <div class="mt-[-4px]">

@@ -22,7 +22,8 @@
       "generator_divider_options_underline": "Underline (_)",
       "generator_divider_options_custom": "Custom (not recommended)",
       "generator_customdivider_title": "Custom divider character",
-      "generator_customdivider_helptext": "Leave blank to cancel divide character."
+      "generator_customdivider_helptext": "Leave blank to cancel divide character.",
+      "generator_captialize_title": "Capitalize the first letter of each pseudoword"
     }
   },
   "ja": {
@@ -48,7 +49,8 @@
       "generator_divider_options_underline": "アンダーライン（_）",
       "generator_divider_options_custom": "カスタム（非推奨）",
       "generator_customdivider_title": "カスタム区切り文字",
-      "generator_customdivider_helptext": "区切り文字をキャンセルするには空白のままにしてください。"
+      "generator_customdivider_helptext": "区切り文字をキャンセルするには空白のままにしてください。",
+      "generator_captialize_title": "各疑似語の最初の文字を大文字にする"
     }
   },
   "zh-CN": {
@@ -74,7 +76,8 @@
       "generator_divider_options_underline": "下划线（_）",
       "generator_divider_options_custom": "自定义（不推荐）",
       "generator_customdivider_title": "自定义虚词分隔",
-      "generator_customdivider_helptext": "留空以取消分隔字符。"
+      "generator_customdivider_helptext": "留空以取消分隔字符。",
+      "generator_captialize_title": "每个虚词首字母大写"
     }
   }
 }
