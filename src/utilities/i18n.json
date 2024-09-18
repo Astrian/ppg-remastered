@@ -14,7 +14,15 @@
       "generator_pseudowordlength_title": "Each pseudoword length",
       "generator_pseudowordlength_helptext": "Each pseudoword must consist of at least 3 letters.",
       "generator_passwordlength_title": "How many pseudowords make up the password?",
-      "generator_passwordlength_helptext": "At least 3 pseudowords are required to form a password."
+      "generator_passwordlength_helptext": "At least 3 pseudowords are required to form a password.",
+      "generator_divider_title": "What character is used to divide between pseudowords?",
+      "generator_divider_options_hyphen": "Hyphen (-)",
+      "generator_divider_options_dollarsign": "Dollar Sign ($)",
+      "generator_divider_options_numberzero": "Number zero (0)",
+      "generator_divider_options_underline": "Underline (_)",
+      "generator_divider_options_custom": "Custom (not recommended)",
+      "generator_customdivider_title": "Custom divider character",
+      "generator_customdivider_helptext": "Leave blank to cancel divide character."
     }
   },
   "ja": {
@@ -32,7 +40,15 @@
       "generator_pseudowordlength_title": "各疑似語の長さ",
       "generator_pseudowordlength_helptext": "各疑似語は、少なくとも3つの文字で構成されている必要があります。",
       "generator_passwordlength_title": "パスワードを構成する疑似語の数は？",
-      "generator_passwordlength_helptext": "パスワードを形成するには、少なくとも3つの疑似語が必要です。"
+      "generator_passwordlength_helptext": "パスワードを形成するには、少なくとも3つの疑似語が必要です。",
+      "generator_divider_title": "疑似語間の区切り文字は何ですか？",
+      "generator_divider_options_hyphen": "ハイフン（-）",
+      "generator_divider_options_dollarsign": "ドル記号（$）",
+      "generator_divider_options_numberzero": "数字 0",
+      "generator_divider_options_underline": "アンダーライン（_）",
+      "generator_divider_options_custom": "カスタム（非推奨）",
+      "generator_customdivider_title": "カスタム区切り文字",
+      "generator_customdivider_helptext": "区切り文字をキャンセルするには空白のままにしてください。"
     }
   },
   "zh-CN": {
@@ -50,7 +66,15 @@
       "generator_pseudowordlength_title": "每个虚词长度",
       "generator_pseudowordlength_helptext": "每个虚词必须至少包含 3 个字母。",
       "generator_passwordlength_title": "密码由多少个虚词组成？",
-      "generator_passwordlength_helptext": "需至少使用 3 个虚词来生成密码。"
+      "generator_passwordlength_helptext": "需至少使用 3 个虚词来生成密码。",
+      "generator_divider_title": "虚词之间使用什么字符分隔？",
+      "generator_divider_options_hyphen": "连字符（-）",
+      "generator_divider_options_dollarsign": "美元符号（$）",
+      "generator_divider_options_numberzero": "数字 0",
+      "generator_divider_options_underline": "下划线（_）",
+      "generator_divider_options_custom": "自定义（不推荐）",
+      "generator_customdivider_title": "自定义虚词分隔",
+      "generator_customdivider_helptext": "留空以取消分隔字符。"
     }
   }
 }

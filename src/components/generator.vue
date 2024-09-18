@@ -72,15 +72,32 @@ function copy() {
       </div>
 
       <div v-if="!randomwordlength">
-        <div class="font-bold">{{ $t('message.generator_pseudowordlength_title') }}</div>
-        <input type="number" v-model="wordlength" @change="generate" min="3" class="w-full shadow-inner border-2 border-slate-200 dark:bg-slate-600 dark:border-slate-500 p-2 rounded-md my-2 outline-none" />
+        <label class="font-bold" for="randomwordlength">{{ $t('message.generator_pseudowordlength_title') }}</label>
+        <input type="number" id="randomwordlength" v-model="wordlength" @change="generate" min="3" class="w-full shadow-inner border-2 border-slate-200 dark:bg-slate-600 dark:border-slate-500 p-2 rounded-md my-2 outline-none" />
         <div class="text-slate-500 dark:text-slate-400">{{$t("message.generator_pseudowordlength_helptext")}}</div>
       </div>
 
       <div>
-        <div class="font-bold">{{ $t('message.generator_passwordlength_title') }}</div>
-        <input type="number" v-model="wordcount" @change="generate" min="3" class="w-full shadow-inner border-2 border-slate-200 dark:bg-slate-600 dark:border-slate-500 p-2 rounded-md my-2 outline-none" />
+        <label class="font-bold" for="wordcount">{{ $t('message.generator_passwordlength_title') }}</label>
+        <input type="number" id="wordcount" v-model="wordcount" @change="generate" min="3" class="w-full shadow-inner border-2 border-slate-200 dark:bg-slate-600 dark:border-slate-500 p-2 rounded-md my-2 outline-none" />
         <div class="text-slate-500 dark:text-slate-400">{{$t("message.generator_passwordlength_helptext")}}</div>
+      </div>
+
+      <div>
+        <div class="font-bold">{{ $t('message.generator_divider_title') }}</div>
+        <select id="worddivider" v-model="worddivider" @change="generate" class="w-full shadow-inner border-2 border-slate-200 dark:bg-slate-600 dark:border-slate-500 p-2 rounded-md my-2 outline-none">
+          <option :value="1">{{ $t('message.generator_divider_options_hyphen') }}</option>
+          <option :value="2">{{ $t('message.generator_divider_options_dollarsign') }}</option>
+          <option :value="3">{{ $t('message.generator_divider_options_numberzero') }}</option>
+          <option :value="4">{{ $t('message.generator_divider_options_underline') }}</option>
+          <option :value="0">{{ $t('message.generator_divider_options_custom') }}</option>
+        </select>
+      </div>
+
+      <div v-if="worddivider === 0">
+        <label class="font-bold" for="customdivider">{{ $t('message.generator_customdivider_title') }}</label>
+        <input id="customdivider" v-model="customdivider" @change="generate" maxlength="1" class="w-full shadow-inner border-2 border-slate-200 dark:bg-slate-600 dark:border-slate-500 p-2 rounded-md my-2 outline-none" />
+        <div class="text-slate-500 dark:text-slate-400">{{$t("message.generator_customdivider_helptext")}}</div>
       </div>
     </div>
   </div>
