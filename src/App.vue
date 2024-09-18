@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-const { locale } = useI18n() 
+const { locale, t } = useI18n() 
 
 import Generator from './components/generator.vue'
 
@@ -19,11 +19,14 @@ onMounted(() => {
   if (localStorage.getItem('locale')) {
     locale.value = localStorage.getItem('locale') as string
     localeSetting.value = locale.value
+    // change webpage title
   } else {
     const browserLang = navigator.language.split('-')[0]
     locale.value = browserLang === 'zh' ? 'zh-CN' : browserLang
     localeSetting.value = "_auto"
   }
+
+  document.title = t('message.appname')
 })
 
 onUnmounted(() => {
@@ -42,6 +45,7 @@ function changeLocale(event: Event) {
     localStorage.setItem('locale', (event.target as HTMLSelectElement).value)
     locale.value = (event.target as HTMLSelectElement).value
   }
+  document.title = t('message.appname')
 }
 </script>
 
