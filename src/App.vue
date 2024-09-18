@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n() 
 
-import Generator from './components/generator.vue';
+import Generator from './components/generator.vue'
 
 onMounted(() => {
   const link = document.createElement('link')
-    link.rel = 'stylesheet'
-    link.href = `https://cdn.fonts.net/kit/${import.meta.env.VITE_MONOTYPE_CSS_TOKEN}.css`
-    link.crossOrigin = 'anonymous'
+  link.rel = 'stylesheet'
+  link.href = `https://cdn.fonts.net/kit/${import.meta.env.VITE_MONOTYPE_CSS_TOKEN}.css`
+  link.crossOrigin = 'anonymous'
 
-    document.head.appendChild(link)
+  document.head.appendChild(link)
 })
 
 onUnmounted(() => {
@@ -18,6 +20,17 @@ onUnmounted(() => {
     document.head.removeChild(link)
   }
 })
+
+function changeLocale(event: Event) {
+  if ((event.target as HTMLSelectElement).value === '_auto') {
+    localStorage.removeItem('locale')
+    const browserLang = navigator.language.split('-')[0]
+    locale.value = browserLang === 'zh' ? 'zh-CN' : browserLang
+  } else {
+    localStorage.setItem('locale', (event.target as HTMLSelectElement).value)
+    locale.value = (event.target as HTMLSelectElement).value
+  }
+}
 </script>
 
 <template>
@@ -43,8 +56,9 @@ onUnmounted(() => {
     <div class="flex flex-col gap-0 mb-4">
       <div class="text-sm text-slate-500 dark:text-slate-400">Made by <a href="https://astrian.moe" target="_blank" class="text-slate-500 dark:text-slate-400 underline">Astrian</a></div>
       <div class="text-sm text-slate-500 dark:text-slate-400 flex">
-        <div>Language:</div>
-        <select class="bg-slate-100 rounded-md px-2 ml-2 outline-none" v-model="$i18n.locale">
+        <div>Language / 語言 / 语言 / 言語</div>
+        <select class="bg-slate-100 dark:bg-slate-600 rounded-md px-2 ml-2 outline-none" @change="changeLocale">
+          <option value="_auto">Auto / 自動 / 自动 / オートメーション</option>
           <option value="en">English</option>
           <option value="ja">日本語</option>
           <option value="zh-CN">简体中文（中国大陆）</option>
