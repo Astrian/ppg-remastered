@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n() 
 
 import Generator from './components/generator.vue'
+
+const localeSetting = ref(locale.value)
 
 onMounted(() => {
   const link = document.createElement('link')
@@ -12,6 +14,16 @@ onMounted(() => {
   link.crossOrigin = 'anonymous'
 
   document.head.appendChild(link)
+
+  // load locale
+  if (localStorage.getItem('locale')) {
+    locale.value = localStorage.getItem('locale') as string
+    localeSetting.value = locale.value
+  } else {
+    const browserLang = navigator.language.split('-')[0]
+    locale.value = browserLang === 'zh' ? 'zh-CN' : browserLang
+    localeSetting.value = "_auto"
+  }
 })
 
 onUnmounted(() => {
@@ -57,7 +69,7 @@ function changeLocale(event: Event) {
       <div class="text-sm text-slate-500 dark:text-slate-400">Made by <a href="https://astrian.moe" target="_blank" class="text-slate-500 dark:text-slate-400 underline">Astrian</a></div>
       <div class="text-sm text-slate-500 dark:text-slate-400 flex">
         <div>Language / 語言 / 语言 / 言語</div>
-        <select class="bg-slate-100 dark:bg-slate-600 rounded-md px-2 ml-2 outline-none" @change="changeLocale">
+        <select class="bg-slate-100 dark:bg-slate-600 rounded-md px-2 ml-2 outline-none" @change="changeLocale" v-model="localeSetting">
           <option value="_auto">Auto / 自動 / 自动 / オートメーション</option>
           <option value="en">English</option>
           <option value="ja">日本語</option>
