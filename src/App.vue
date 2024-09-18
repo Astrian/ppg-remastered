@@ -40,6 +40,18 @@ onUnmounted(() => {
 
     <hr class="my-8" />
 
-    <div class="mb-4 text-sm text-slate-500 dark:text-slate-400">Made by <a href="https://astrian.moe" target="_blank" class="text-slate-500 dark:text-slate-400 underline">Astrian</a></div>
+    <div class="flex flex-col gap-0 mb-4">
+      <div class="text-sm text-slate-500 dark:text-slate-400">Made by <a href="https://astrian.moe" target="_blank" class="text-slate-500 dark:text-slate-400 underline">Astrian</a></div>
+      <div class="text-sm text-slate-500 dark:text-slate-400 flex">
+        <div>Language:</div>
+        <select class="bg-slate-100 rounded-md px-2 ml-2 outline-none" v-model="$i18n.locale">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="zh-CN">简体中文（中国大陆）</option>
+          <option value="zh-TW">繁體中文（台灣地區）</option>
+          <option value="yue">繁體中文（粵語口語）</option>
+        </select>
+      </div>
+    </div>
   </section>
 </template>
